@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Cadastro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="warning" (click)="mostraOpcoes()">+</ion-fab-button>
+  </ion-fab>
+
+  <ion-item>
+    <ion-label position="fixed">Nome</ion-label>
+    <ion-input [(ngModel)] = 'nome'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">E-mail</ion-label>
+    <ion-input [(ngModel)] = 'email'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Celular</ion-label>
+    <ion-input [(ngModel)] = 'celular'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Assunto</ion-label>
+    <ion-input [(ngModel)] = 'assunto'></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Mensagem</ion-label>
+    <ion-textarea rows="6" [(ngModel)] = 'mensagem'></ion-textarea>
+  </ion-item>
+  <ion-button size="block"(click)="presentAlert()">Enviar</ion-button>
+<p>{{ handlerMessage }}</p>
+<p>{{ roleMessage }}</p>
+
+</ion-content>
